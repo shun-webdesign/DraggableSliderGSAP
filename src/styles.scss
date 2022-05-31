@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  position: relative;
+  font-family: "Roboto", 'Helvetica Neue', sans-serif;
+  height: 100vh;
+  width: 100%;
+
+  h1{
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+  }
+  
+  .slider{
+    position: fixed;
+    top: 50%;
+    left: 6vw;
+    transform: translateY(-50%);
+    display: flex;
+    transition: 0.2s ease-out;
+  
+    .slide{
+      &:not(:first-child){
+        margin-left: 6vw;
+      }
+      .preview{
+        height: 350px;
+        width: 350px;
+        background: #c4c4c4;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .infos{
+        font-weight: light;
+
+        h3, h2{
+          font: inherit;
+        }
+
+        h3{
+          padding-top: 15px;
+          color: #635D5D;
+          font-size: 10px;
+          text-transform: uppercase;
+        }
+        h2{
+          font-size: 18px;
+          color: #000;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+
